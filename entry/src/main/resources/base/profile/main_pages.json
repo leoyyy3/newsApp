@@ -1,5 +1,6 @@
 {
   "src": [
+    "pages/Open",
     "pages/Index",
     "pages/Login"
   ]
