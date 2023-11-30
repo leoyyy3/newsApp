@@ -11,6 +11,28 @@
     {
       "name": "EntryAbility_label",
       "value": "财经新闻"
+    },
+
+    {
+      "name": "menu",
+      "value": "新闻"
+    },
+    {
+      "name": "linechart",
+      "value": "行情"
+    },
+    {
+      "name": "user",
+      "value": "我的"
+    },
+
+    {
+      "name": "open_text1",
+      "value": "财经新闻"
+    },
+    {
+      "name": "open_text2",
+      "value": "行情走势"
     }
   ]
 }

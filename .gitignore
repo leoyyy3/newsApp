@@ -9,3 +9,5 @@
 /.clang-format
 /.clang-tidy
 **/.test
+/entry/.preview
+/entry/src/main/ets/common/apis/hosts.ets
