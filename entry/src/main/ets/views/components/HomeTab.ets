@@ -1,6 +1,6 @@
 // import {AxiosResponse} from "@ohos/axios"
 // import axios from "../utils/http";
-// import NewsList from "./NewsList"
+import RecommentNews from "./RecommentNews"
 import { homeNewsList, homeChannelList } from "../../common/apis/homeApi"
 import hilog from '@ohos.hilog';
 import { AxiosResponse } from '@ohos/axios';
@@ -24,7 +24,7 @@ interface Response<T> {
 
 @Component
 export default struct HomeTab {
-  @State currentIndex: number = 1;
+  @State currentIndex: number = 0;
   @State currentPage: number = 1;
   @State tabList: Tab[] = [];
   @State resstr: string = ''
@@ -65,22 +65,18 @@ export default struct HomeTab {
 
   build() {
     Tabs() {
-      // TabContent() {
-      //   Text(this.resstr)
-      //     .width("100%")
-      //     .height(80)
-      //     .fontSize(14)
-      //     .fontColor("#000")
-      //   // NewsList({ currentIndex: $currentIndex, newsid: tabsItem.id, newsidx: idx})
-      // }
       ForEach(this.tabList, (tabsItem, idx) => {
         TabContent() {
-          Text("this.tabList.length.toString()")
-            .width("100%")
-            .height(80)
-            .fontSize(14)
-            .fontColor("#000")
-          // NewsList({ currentIndex: $currentIndex, newsid: tabsItem.id, newsidx: idx})
+          if (idx === 1) {
+            RecommentNews()
+          }else{
+            Text("content")
+              .width("100%")
+              .height(80)
+              .fontSize(24)
+              .textAlign(TextAlign.Center)
+              .fontColor("#000")
+          }
         }
         .tabBar(this.TabBuilder(idx))
       }, (tabsItem) => JSON.stringify(tabsItem.id));

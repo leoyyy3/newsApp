@@ -5,6 +5,10 @@ import HomeTab from "./components/HomeTab"
 export default struct Home {
   @State message: string = 'Login'
 
+  aboutToAppear(){
+    console.log("apper--------home")
+  }
+
   build() {
     Column() {
       Row({ space: 10 }) {

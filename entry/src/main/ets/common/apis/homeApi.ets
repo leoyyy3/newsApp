@@ -14,3 +14,7 @@ export function homeNewsList() {
 export function homeChannelList<T>() {
   return request.get<T>(`${nwapi}/version/selectchannellist`)
 }
+
+export function homeRecommend<T>() {
+  return request.get<T>(`${wapi}/headlines/recommend.cc`)
+}
